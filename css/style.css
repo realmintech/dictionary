@@ -1,0 +1,39 @@
+#display{
+    margin-top: 10%;
+    width: 400px;
+    height: 40px;
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 10%;
+    box-shadow: azure;
+    margin-bottom: 5%;
+}
+button{
+    padding: 8px;
+    margin-bottom: 5% ;
+    font-size: 24px;
+    border-radius: 8px;
+    background-color: brown;
+    color: wheat;
+}
+body{
+    margin: auto;
+    max-width: 500px;
+}
+.wrap{
+    margin-top: 15%;
+    border: 1px solid black;
+    border-radius: 8%;
+    background-color: blanchedalmond;
+    text-align: center;
+}
+i{
+    font-size: 20px;
+    padding: 5px;
+}
+#content{
+    text-align: start;
+    margin: 10px;
+    font-size: 25px;
+    color: brown;
+}
