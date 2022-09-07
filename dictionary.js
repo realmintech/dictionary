@@ -5,6 +5,12 @@ function press() {
     .then(response => response.json())
     .then(data=>{
         let result = "";
+        if (data[0] == undefined) {
+
+            result += `<h3 class="text-white">${display.value} <i class="fa-solid fa-xmark"></i></h3> Word or phrase does not exist. Please input a valid word`
+
+        } else {
+            result += ` <h3 class="text-white">${display.value} <i class="fa-solid fa-check pl-5"></i></h3>`;
         for (let i = 0; i < data[0].meanings.length; i++) {
            result += `
            <div id="innerContent">
@@ -15,18 +21,24 @@ function press() {
                <p><i class="fas fa-volume-up"><audio controls autoplay src="${data[0].phonetics[0].audio}"></audio></i></p>
            </div>
            <div>
-               <p id="example">Example:${data[0].meanings[i].definitions[0].example}</p>
+               <p id="example">${empty(data[0].meanings[i].definitions[0].example)}</p>
            </div> 
        </div>
            ` 
            +"<br>"
-        }
+        }}
         content.innerHTML = result;
     }
-    )}
-    // if(data[0].meanings[i].definitions[0].example == undefined){
-    //     example.style.display = "none"
-    // }
-    
+    )};
+  function empty(example){
+    if (example == undefined){
+        example= "";
+    }else{
+        example = "Example:" + example
+    }
+    return example
+  }
+
+ 
 
   
